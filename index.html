@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTR - Click-Through Rate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007BFF;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #007BFF;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Click-Through Rate (CTR)</h1>
+    </header>
+    <div class="container">
+        <h2>Що таке CTR?</h2>
+        <p>Click-Through Rate (CTR) - це важливий показник у маркетингу, який вказує на відсоток користувачів, які натиснули на рекламний банер або посилання, порівняно з загальною кількістю відвідувачів, які бачили цей банер чи посилання. Цей показник допомагає визначити ефективність рекламних кампаній і веб-сайтів. Я обрала цю тему, оскільки CTR є ключовим елементом у сучасному цифровому маркетингу та рекламі.</p>
+      <p>Більше інформації про <a href="https://uk.wikipedia.org/wiki/CTR" target="_blank">CTR</a>.</p>
+
+
+        <h2>Формула та теорія CTR</h2>
+    <img src="https://www.wordstream.com/wp-content/uploads/2014/11/what-is-click-through-rate-ctr-definition.png" alt="Формула CTR" width="100%" height="auto">
+      <p>CTR – це важлива метрика, тому що вона допомагає зрозуміти своїх клієнтів. На основі її аналізу можна дізнатися, <a href="https://support.google.com/google-ads/answer/6167118?sjid=4809761662583885761-EU&visit_id=638316887002562098-1151143050&rd=1" target="_blank">що працює та що не працює при спробі охопити ЦА</a>. Низький показник CTR може вказувати на те, що ви орієнтуєтеся не на ту аудиторію або недостатньо переконливо розмовляєте її мовою, щоб переконати клікнути.</p>
+
+        <h2>Калькулятор CTR</h2>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #007BFF;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .result {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CTR Калькулятор</h1>
+        <label for="clicks">Кількість кліків:</label>
+        <input type="number" id="clicks" min="0" placeholder="Введіть кількість кліків">
+        <label for="impressions">Кількість переглядів:</label>
+        <input type="number" id="impressions" min="0" placeholder="Введіть кількість переглядів">
+        <button onclick="calculateCTR()">Розрахувати CTR</button>
+        <div class="result" id="ctrResult"></div>
+    </div>
+
+    <script>
+        function calculateCTR() {
+            const clicks = parseFloat(document.getElementById('clicks').value);
+            const impressions = parseFloat(document.getElementById('impressions').value);
+
+            if (isNaN(clicks) || isNaN(impressions) || impressions === 0) {
+                alert("Будь ласка, введіть коректні значення для обох полів та переконайтесь, що кількість переглядів більше нуля.");
+                return;
+            }
+
+            const ctr = (clicks / impressions) * 100;
+
+            document.getElementById('ctrResult').innerHTML = `CTR: ${ctr.toFixed(2)}%`;
+        }
+    </script>
+   <h2>Про автора</h2>
+        <p>Анна Дейнеко - студентка 3-го курсу економічного факультету, цікавлюся маркетингом та аналітикою. Мета цього сайту - розширити знання про CTR та поділитися корисною інформацією з іншими.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Всі права захищено</p>
+    </footer>
+</body>
+</html>
